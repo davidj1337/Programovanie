@@ -19,5 +19,5 @@ for i in range(pocet_suborov()):
     poradie_slova += 1
     if poradie_slova == len(input2):
         poradie_slova -= len(input2)
-    with open(f"""slovo{poradie_slova}""", mode="w", encoding="utf-8") as subor:
+    with open(f"""slovo{i}""", mode="w", encoding="utf-8") as subor:
         print(input2[poradie_slova - 1], file=subor)
