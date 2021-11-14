@@ -10,10 +10,9 @@ class Triangle(Shape):
         if self.color != None:
             turtle.pencolor(self.color)
 
-        for i in range(1):
-            turtle.fd(self.a)
-            turtle.left(120)
-            turtle.fd(self.a)
-            turtle.left(120)
-            turtle.fd(self.a)
-            turtle.left(120)
+        turtle.fd(self.a)
+        turtle.left(120)
+        turtle.fd(self.a)
+        turtle.left(120)
+        turtle.fd(self.a)
+        turtle.left(120)
