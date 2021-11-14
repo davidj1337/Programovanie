@@ -9,6 +9,5 @@ class Circle(Shape):
         super().draw(turtle)
         if self.color != None:
             turtle.pencolor(self.color)
-
-        for i in range(1):
-            turtle.circle(self.a)
+            
+        turtle.circle(self.a)
