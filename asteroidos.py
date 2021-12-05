@@ -14,7 +14,7 @@ HEIGHT = 800
 "Game constants"
 ACCELERATION = 400  # Zrýchlenie rakety
 ROTATION_SPEED = 0.1  # Rýchlosť otáčania rakety
-ACCELERATION_ASTEROID = 100
+ASTEROIDS_SPEED = 230
 
 objects = []  # ZOZNAM VŠETKÝCH AKTÍVNYCH OBJEKTOV V HRE
 batch = pyglet.graphics.Batch()  # ZOZNAM SPRITOV PRE ZJEDNODUŠENÉ VYKRESLENIE
@@ -87,8 +87,8 @@ class SpaceObject:
 
 class Asteroid(SpaceObject):
     def tick(self, dt):
-        self.x_speed = self.x_speed + dt * ACCELERATION_ASTEROID * math.cos(self.rotation - random.randint(0, 4))
-        self.y_speed = self.y_speed + dt * ACCELERATION_ASTEROID * math.sin(self.rotation - random.randint(0, 4))
+        self.x_speed = ASTEROIDS_SPEED
+        self.y_speed = ASTEROIDS_SPEED
 
         SpaceObject.tick(self, dt)
 
