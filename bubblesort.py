@@ -3,7 +3,7 @@ from timeit import default_timer as timer
 
 start = timer()
 
-def bubbleSort(arr):
+def bubbleSort(pole):
     n = len(pole)
 
     for i in range(n - 1):
