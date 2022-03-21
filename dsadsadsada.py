@@ -1,67 +1,37 @@
+class LinkedList:
+    def __init__(self):
+        self.length = 0
+        self.headNode = None
+        self.tail = None
+
+    def addNode(self, value):
+        pass
+
+
+    def getValues(self):
+        pass
+
+    def getHead(self):
+        pass
+
+    def getTail(self):
+        pass
+
+    def removeValues(self, value):
+
+
+    def insert(self, value, position):
+        pass
+
+
+
 class Node:
-   def __init__(self, dataval=None):
-      self.dataval = dataval
-      self.nextval = None
+    def __init__(self, value):
+        self.value = value
+        self.nextNode = None
 
-class SLinkedList:
-   def __init__(self):
-      self.headval = None
-      
-   def listprint(self):
-      printval = self.headval
-      while printval is not None:
-         print (printval.dataval)
-         printval = printval.nextval
-        
-   def AtBegining(self,newdata):
-      NewNode = Node(newdata)
-      NewNode.nextval = self.headval
-      self.headval = NewNode
-        
-   def AtEnd(self, newdata):
-      NewNode = Node(newdata)
-      if self.headval is None:
-         self.headval = NewNode
-         return
-      laste = self.headval
-      while(laste.nextval):
-         laste = laste.nextval
-      laste.nextval=NewNode
-    
-   def Inbetween(self,middle_node,newdata):
-      if middle_node is None:
-         print("The mentioned node is absent")
-         return
-        
-      NewNode = Node(newdata)
-      NewNode.nextval = middle_node.nextval
-      middle_node.nextval = NewNode
-    
-   def RemoveNode(self, Removekey):
-      HeadVal = self.head
-         
-      if (HeadVal is not None):
-         if (HeadVal.data == Removekey):
-            self.head = HeadVal.next
-            HeadVal = None
-            return
-      while (HeadVal is not None):
-         if HeadVal.data == Removekey:
-            break
-         prev = HeadVal
-         HeadVal = HeadVal.next
+    def getValue(self):
+        return self.value
 
-      if (HeadVal == None):
-         return
-
-      prev.next = HeadVal.next
-         HeadVal = None
-
-mojlist = SLinkedList()
-
-
-
-
-
-      
-      
+    def setNextNode(self, node):
+        self.nextNode = node
