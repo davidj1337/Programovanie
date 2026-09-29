@@ -1,3 +1,16 @@
+/*
+Zadání
+Použijte přípravu, spojíme ls a stat dohromady.
+1. Upravte svůj ls tak, by vypisoval opakovaně zadané soubory – cca 1x za 2–3 sekundy. Při spuštění si zadáte třídění dle velikosti nebo jména, viz příklad na githubu, parametr -u si vynutí opačný směr třídění.
+Pokud nějaký soubor zmizí, budou informace o něm jen otazníky.
+
+2. Pokud se při výpisu souborů zjistí, že došlo ke změně velikosti souboru, tak se na stderr vypíše ----- soubor a následují jen nová data. Soubory neudržujte stále otevřené, otevření jen při změně.
+Pokud nějaký soubor nebude mít (ztratí) právo pro čtení, indikujte to ve výpise.
+Pro účely zobrazení stderr použijte druhý terminál. V něm si zjistěte tty a to použijte pro přesměrování stderr v prvním terminálu na druhý.
+myls ........ 2>/dev/pts/xy
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
